@@ -79,40 +79,25 @@
 
 .nav-bar-2 {
     display: none;
-    padding: 0 10px;
     
     & .nav-bar-button {
         background-color: $color-tertiary;
-        outline: none;
-        border: none;
-
-        align-items: center;
         color: $color-secondary;
 
-        & > span {
-            background-color: #fff;
-            padding: 3px;
-            border-radius: 50%;
+        width: 45px;
 
-            transition-duration: 0.3s;
-            cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 50%;
 
-            &:hover {
-                background-color: #11111117;
-            }
+        cursor: pointer;
+
+        transition-duration: 0.3s;
+
+        &:hover {
+            background-color: #11111117;
         }
-
-
-
     }
-}
-
-.button-block {
-    display: block;
-}
-
-.button-none {
-    display: none;
 }
 
 .nav-bar-list {

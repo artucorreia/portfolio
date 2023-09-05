@@ -6,18 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  display: string = 'none';
   menuOpen: boolean = false;
 
   constructor() { }
 
-  displayMenu() { 
+  displayMenu(): boolean { 
     if (this.menuOpen) {
-      this.menuOpen = false;
-      this.display = 'none';
+      return this.menuOpen = false;
     } else {
-      this.menuOpen = true;
-      this.display = 'block';
+      return this.menuOpen = true;
     }
   }
 }
