@@ -7,14 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   menuOpen: boolean = false;
+  display: string = 'none';
 
   constructor() { }
 
-  displayMenu(): boolean { 
+  displayMenu(): void { 
     if (this.menuOpen) {
-      return this.menuOpen = false;
+      this.menuOpen = false;
+      this.display = 'none';
     } else {
-      return this.menuOpen = true;
+      this.menuOpen = true;
+      this.display = 'block';
     }
   }
 }

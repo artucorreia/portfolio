@@ -33,7 +33,7 @@
             </button>
         </nav>
     </section>
-    <section class="nav-bar-list" *ngIf="menuOpen" (click)="displayMenu()">
+    <section class="nav-bar-list" [ngStyle]="{'display': display}" (click)="displayMenu()">
         <a href="./#cape" class="nav-bar-list-link">início</a>
         <a href="./#about" class="nav-bar-list-link">sobre</a>
         <a href="./#projects" class="nav-bar-list-link">projetos</a>
