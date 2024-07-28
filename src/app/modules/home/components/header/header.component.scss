@@ -1,0 +1,168 @@
+@import '../../../../dist/scss/variables.scss';
+
+* {
+    font-family: $font-family;
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+
+    background-color: $tertiary-color;
+    box-shadow: $box-shadow-header;
+
+    width: 100%;
+    
+    color: $font-primary-color;
+}
+
+.container {
+    display: flex;
+    padding: 15px 40px;
+    justify-content: space-between;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+  
+    & a {
+        color: $font-primary-color;
+        text-decoration: none;
+
+        transition-duration: 0.3s;
+    }
+
+    & a:hover {
+        color: $quaternary-color;
+    }
+}
+
+.img-logo {
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.nav-bar {
+    align-items: center;
+    display: flex;
+
+    font-size: 0.9em;
+}
+
+.nav-bar-link {
+    color: $font-primary-color;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    padding: 0 25px;
+    
+    transition-duration: 0.3s;
+    
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+
+    &:hover {
+        color: $quaternary-color;
+    }
+}
+
+.nav-bar-2 {
+    display: none;
+    
+    & .nav-bar-button {
+        background-color: $tertiary-color;
+        color: $secondary-color;
+
+        width: 45px;
+
+        outline: none;
+        border: none;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition-duration: 0.3s;
+
+        &:hover {
+            background-color: #11111117;
+        }
+    }
+}
+
+.nav-bar-list {
+    text-align: end;
+}
+
+.nav-bar-list-link:first-of-type {
+    border-top: 1px solid #eee;
+}
+  
+.nav-bar-list-link {
+    display: block;
+
+    padding: 20px 35px;
+
+    border-bottom: 1px solid #eee;
+    
+    color: $font-primary-color;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    transition-duration: 0.3s;
+    
+    font-weight: bold;
+    font-size: 0.9em;
+
+    letter-spacing: 2px;
+    
+    &:hover {
+        color: $quaternary-color;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 8px 20px 8px 10px;
+    }
+
+    .container-logo {
+        & .img-logo {
+            max-width: 3rem;
+        }
+
+        & .name {
+            font-size: 1em;
+        }
+    }
+    
+    .nav-bar {
+        & .nav-bar-link {
+            padding: 0 8px;
+            
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar-2 {
+        display: flex ;
+    }
+}

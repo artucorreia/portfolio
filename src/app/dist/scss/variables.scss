@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+// colors
+$primary-color: #111111;
+$secondary-color: #333333;
+$tertiary-color: #fff;
+$quaternary-color: #7843E9;
+$quintenary-color: #fafafa;
+
+// font
+$font-family: 'Open Sans', sans-serif;
+
+// font color
+$font-primary-color: $secondary-color;
+$font-secondary-color: $primary-color;
+$font-tertiary-color: $tertiary-color;
+$font-quaternary-color: $quaternary-color;
+
+// backgroun imagae
+$background-image: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(../../assets/svg/background.svg);
+
+$box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.329);
+$box-shadow-header: 0 10px 100px rgba(0,0,0,.11);
+$box-shadow-light: 5px 7px 18px hsla(0, 0%, 0%, 0.06);
+$text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
