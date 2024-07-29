@@ -1,0 +1,101 @@
+@import '../../../../dist/scss/variables.scss';
+@import '../../../../dist/scss/classes.scss';
+@import "primeicons/primeicons.css";
+
+* {
+    font-family: $font-family;
+}
+
+.container-social {
+    position: absolute;
+    top: 50%;
+
+    padding: 10px;
+
+    transform: translate(-10%, -50%);
+
+    background-color: $tertiary-color;
+    box-shadow: $box-shadow;
+
+    border-radius: 0 7px 7px 0;
+}   
+
+.social {
+    padding: 5px;
+
+    transition-duration: 0.3s;
+    & a {
+        color: $primary-color;
+        text-decoration: none;
+
+        display: block;
+    }
+}
+
+.social:hover {
+    transform: translateY(-5%);
+}
+
+.main-container {
+    background-image: $background-image;
+    background-position: center;
+
+    height: 100vh;
+    padding: 7px;
+
+    position: relative;
+}
+
+.container {
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 2.1em;
+    font-weight: 800;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $font-primary-color;
+    text-shadow: $text-shadow;
+
+    margin-bottom: 10px;
+}
+
+.content {
+    margin: 20px auto;
+    
+    text-align: center;
+    color: $font-primary-color;
+    text-shadow: $text-shadow;
+}
+
+.emphasis {
+    font-weight: 600;
+}
+
+.div-button {
+    margin-top: 15px;
+    text-align: center;
+
+    scroll-behavior: smooth;
+    & a {
+        text-decoration: none;
+        color: $font-tertiary-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .container-social {
+        display: none;
+    }
+}

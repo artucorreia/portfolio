@@ -1,0 +1,37 @@
+<main id="about" class="container_main">
+    <h1 class="title-main">sobre mim</h1>
+    <div class="divider"></div>
+    
+    <span class="describe">
+        Aqui você encontrá mais informações sobre mim, o que eu faço atualmente, minhas metas, além de conhecer um pouco das minhas habilidades e tecnologias que domino
+    </span>
+
+    <section class="container">
+        <article class="about">
+            <h3 class="sub-title">me conheça</h3>
+            <div class="container-about">
+                <p>Sou um Desenvolvedor Web, e utilizo as tecnologias Spring Boot e Angular. Confira alguns dos meus trabalhos na seção de Projetos.</p>
+                <p>Atualmente faço o curso de Sistemas de Informação e estou no 5º período.</p>
+                
+                <p>Meu primeiro contato com programação foi ainda no ensino médio, onde comecei a estudar lógica de programação. Um pouco antes de iniciar a faculdade já havia notado que era com isso que gostaria de trabalhar, e então comecei a focar bastante nos estudos tanto na área de Front-End quanto Back-End.</p>
+                
+                <p>A curto prazo minha meta é conseguir uma vaga de estágio ou júnior trabalhando com desenvolvimento.</p>
+                
+                <p>Estou aberto a oportunidades de trabalho. Sinta-se livre para me contatar.</p>
+                <a href="./#contact" class="button">contato</a>
+            </div>
+        </article>
+        <article class="skills-container">
+            <h3 class="sub-title">minhas habilidades</h3> <br>
+            <div class="skills">
+                @for (skill of skills; track $index) {
+                    <div class="skill">
+                        {{skill.name}} 
+                        <img [src]="skill.logo" alt="logo {{skill.name}}" class="img-logo">
+                    </div>
+
+                }
+            </div>
+        </article>
+    </section>
+</main>

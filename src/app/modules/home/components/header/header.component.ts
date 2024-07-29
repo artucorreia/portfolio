@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -16,7 +14,7 @@ export class HeaderComponent {
 
   constructor() { }
 
-  displayMenu(): void { 
+  public displayMenu(): void { 
     if (this.menuOpen) {
       this.menuOpen = false;
       this.display = 'none';
