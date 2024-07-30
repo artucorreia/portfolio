@@ -1,1 +1,27 @@
-<p>projects works!</p>
+<main id="projects" class="container-main">
+    <h1 class="title-main">projetos</h1>
+    <div class="divider"></div>
+    
+    <span class="describe">Aqui você vai encontrar alguns dos meus projetos</span>
+    
+@for (project of projects; track $index) {
+    <section class="container">
+        <img 
+        [src]="project.imageUrl" 
+        alt="image {{project.name}}" 
+        class="img-project">
+
+        <h3 class="title">{{project.name}}</h3>
+        
+        <p class="content">{{project.description}}</p>
+        
+        <article class="buttons-links">
+            @if (project.active) {
+                <a href="https://artucorreia.github.io/app-todo-list/" target="_blank" rel="next" class="button">experimente</a><br>
+            }
+            
+            <a [href]="project.repositoryUrl" target="_blank" rel="next" class="button">repositório</a>
+        </article>
+    </section>
+}
+</main>

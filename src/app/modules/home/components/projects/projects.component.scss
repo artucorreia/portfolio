@@ -1,0 +1,64 @@
+@import '../../../../dist/scss/variables.scss';
+@import '../../../../dist/scss/classes.scss';
+
+* {
+    font-family: $font-family;
+}
+
+.title {
+    text-align: center;
+    color: $font-secondary-color;
+    font-size: 1.2em;
+
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 60px auto;
+    padding: 10px;
+
+    border-radius: 5px;
+
+    max-width: 330px;
+    min-height: 250px;
+    
+    color: $font-primary-color;
+
+    box-shadow: $box-shadow-light;
+    text-shadow: $text-shadow;
+
+    & * {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    & .img-project {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+.content {
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.buttons-links {
+    margin: auto;
+    
+    & > a {
+        display: block;
+        text-align: center;
+        padding: 10px 30px;
+
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 600;
+        
+        color: $font-tertiary-color;
+
+        margin-bottom: 10px;
+
+        box-shadow: $box-shadow;
+    }
+}

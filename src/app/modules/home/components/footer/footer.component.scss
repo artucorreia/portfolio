@@ -1,0 +1,128 @@
+@import '../../../../dist/scss/variables.scss';
+@import "primeicons/primeicons.css";
+
+* {
+    font-family: $font-family;
+}
+
+.container {
+    background-color: #000;
+    color: $tertiary-color;
+    
+    height: 60vh;
+
+    font-size: 0.8em;
+}
+
+.upper {
+    width: 80vw;
+    margin: auto;
+
+    display: flex;
+    padding: 16vh 0vh;
+    line-height: 1.3em;
+    justify-content: space-between;
+
+    & h2 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+        font-size: 1.3em;
+    }
+    
+    & > .row-1 {
+        width: 30vw;
+        order: 2;
+    }
+
+    & > .row-2 {
+        width: 40vw;
+    }
+
+    & a {
+        color: $tertiary-color;
+        margin-right: 10px;
+    }
+}
+
+.division {
+    margin: auto;
+    width: 80vw;
+}
+
+.lower {
+    text-align: center;
+    max-width: 400px;
+
+    padding: 5vh 0;
+    margin: auto;
+
+    text-transform: capitalize;
+
+    & a {
+        color: $tertiary-color;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 954px) {
+    .upper {
+        padding: 13vh 0;
+    }
+
+    .lower {
+        padding: 8vh 0;
+    }
+}
+
+@media (max-width: 732px) {
+    .container {
+        height: 50vh;
+    }
+
+    .upper {
+        padding: 8vh 0;
+    }
+
+    .lower {
+        padding: 6vh;
+    }
+}
+
+@media (max-width: 600px) { 
+    .container {
+        height: 55vh;
+    }
+
+    .upper {
+        display: block;
+
+        padding: 5vh 0;
+
+        & > .row-1 {
+            margin-bottom: 5vh;
+        }
+
+        & > .row-2 {
+            width: 70vw;
+        }
+    }
+
+    .lower {
+        padding: 2vh 0;
+    }
+}
+
+@media (max-width: 402px) {
+    .upper {
+        padding: 5vh 0;
+
+        & .row-1 {
+            width: 50vw;
+        }
+    }
+    
+    .lower {
+        padding: 2vh 0;
+    }
+}

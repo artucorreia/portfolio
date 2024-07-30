@@ -3,6 +3,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { CapeComponent } from '../../components/cape/cape.component';
 import { AboutComponent } from '../../components/about/about.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { ProjectsComponent } from '../../components/projects/projects.component'
     HeaderComponent,
     CapeComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
