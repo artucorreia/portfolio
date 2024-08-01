@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
-  private apiUrl: string = "http://localhost:8080/api/v1/";
+  private _apiUrl: string = "http://localhost:8080/api/v1/";
   
   constructor(private http: HttpClient) { }
 
   public findAll(): Observable<Skill[]> {
-    return this.http.get<Skill[]>(`${this.apiUrl}skills`).pipe(
+    return this.http.get<Skill[]>(`${this._apiUrl}skills`).pipe(
       res => res,
       error => error
     );

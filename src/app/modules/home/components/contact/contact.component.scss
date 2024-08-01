@@ -1,0 +1,108 @@
+@import '../../../../dist/scss/variables.scss';
+@import '../../../../dist/scss/classes.scss';
+@import "primeicons/primeicons.css";
+
+* {
+    font-family: $font-family;
+}
+
+.container {
+    background-image: $background-image;
+
+    height: 130vh;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+
+    color: $font-primary-color;
+}
+
+.card {
+    margin: 60px auto 30px auto;
+    
+    min-height: 550px;
+    max-width: 700px;
+    padding: 1em;
+    
+    border-radius: 5px;
+    background-color: $tertiary-color;
+}
+
+.article-name, .article-email, .article-message {
+    padding-bottom: 30px;
+
+    margin: auto;
+
+    & > label {
+        font-size: 0.9em;
+        color: $font-primary-color;
+    
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+}
+.invalidMessage {
+    font-size: 0.8em;
+    color: #ff6e6e;
+}
+
+.input, .textarea {
+    display: grid;
+    width: 96%;
+
+    padding: 1.5em 2%;
+
+    outline-style: none;
+
+    background-color: #f0f0f0;
+    color: rgb(51, 51, 51);
+
+    margin-top: 10px;
+
+    font-size: 0.9em;
+    font-weight: 500;
+
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 5px;
+
+    transition-duration: 0.3s;
+
+    &:focus {
+        border-radius: 20px;
+    }
+
+}
+
+.textarea {
+    resize: none;
+}
+
+.invalidInput {
+    border: 1px solid #ff6e6e;
+    display: block;
+}
+
+.div-button {
+    text-align: end;
+}
+
+.button {
+    font-size: 1em;
+    &:disabled {
+        background-color: $color-effect-primary;
+        cursor: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .div-button {
+        text-align: center;
+
+        & .button {
+            width: 100%;
+        }
+    }
+}

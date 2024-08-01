@@ -1,3 +1,5 @@
+import { Technology } from "./technology";
+
 export interface Project {
     id: number;
     name: string;
@@ -6,4 +8,5 @@ export interface Project {
     deployUrl: string;
     repositoryUrl: string;
     active: boolean;
+    technologies: Technology[];
 }

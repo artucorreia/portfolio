@@ -1,0 +1,98 @@
+<main class="container container-main" id="contact">
+    <h1 class="title-main">contato</h1>
+    
+    <div class="divider"></div>
+    
+    <span class="describe">Não hesite em entrar em contato comigo enviando o formulário abaixo, darei retorno o mais rápido possível</span>
+    
+    <section class="card">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+            
+            <article class="article-name">
+                <label for="nameId">nome</label>
+                
+                <input 
+                required 
+                maxlength="100" 
+                type="text" 
+                class="input"
+                id="nameId"
+                placeholder="Digite Seu Nome" 
+                formControlName="name"
+                [ngClass]="{'invalidInput': contactForm.controls.name.invalid && (contactForm.controls.name.dirty && contactForm.controls.name.touched)}">
+                
+                @if (
+                    contactForm.controls.name.invalid && (contactForm.controls.name.dirty && contactForm.controls.name.touched)
+                ) {
+                    <span class="invalidMessage">
+                        <i class="pi pi-info-circle"></i>
+                        Campo Inválido
+                    </span>
+                }
+            </article>
+            
+            <article class="article-email">
+                
+                <label for="emailId">email</label>
+                
+                <input 
+                required 
+                maxlength="100"
+                type="email"
+                class="input" 
+                id="emailId" 
+                placeholder="exemplo@gmail.com"
+                formControlName="email"
+                [ngClass]="
+                    {'invalidInput': contactForm.controls.email.invalid && (contactForm.controls.email.dirty && contactForm.controls.email.touched)}"
+                >
+                
+                @if (
+                    contactForm.controls.email.invalid && 
+                    (contactForm.controls.email.dirty && contactForm.controls.email.touched)
+                ) {
+                    <span class="invalidMessage">
+                        <i class="pi pi-info-circle"></i>
+                        Campo Inválido
+                    </span>
+                }
+            </article>
+            
+            <article class="article-message">
+                <label for="messageId">mensagem</label>
+                
+                <textarea
+                required
+                maxlength="750" 
+                class="textarea"
+                id="messageId" 
+                cols="29" 
+                rows="10" 
+                placeholder="Digite Sua Mensagem" 
+                formControlName="message"
+                [ngClass]="{'invalidInput': contactForm.controls.message.invalid && (contactForm.controls.message.dirty && contactForm.controls.message.touched)}"></textarea>
+                
+                @if (
+                    contactForm.controls.message.invalid && 
+                    (contactForm.controls.message.dirty && contactForm.controls.message.touched)
+                ) {
+                    <span class="invalidMessage">
+                        <i class="pi pi-info-circle"></i>
+                        Campo Inválido
+                    </span>
+                }
+            </article>
+            
+            <div class="div-button">
+                <button 
+                disabled="false"
+                [disabled]="contactForm.invalid"
+                type="submit" 
+                class="button">
+                    enviar
+                </button>
+            </div>
+
+        </form>
+    </section>
+</main>

@@ -20,4 +20,8 @@ export class ProjectsComponent {
       error: error => console.error(error)
     });
   }
+
+  seeProjects() {
+    console.log(this.projects);
+  }
 }

@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectService {
-  private apiUrl: string = "http://localhost:8080/api/v1/";
+  private _apiUrl: string = "http://localhost:8080/api/v1/";
   
   constructor(private http: HttpClient) { }
 
   public findAll(): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.apiUrl}projects`).pipe(
+    return this.http.get<Project[]>(`${this._apiUrl}projects`).pipe(
       res => res,
       error => error
     );
