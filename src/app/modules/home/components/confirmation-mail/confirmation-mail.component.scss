@@ -1,0 +1,28 @@
+@import '../../../../dist/scss/variables.scss';
+@import '../../../../dist/scss/animations.scss';
+@import "primeicons/primeicons.css";
+
+.container {
+    padding: 1rem 2rem 3rem 2rem;
+    
+    background-color: $tertiary-color;
+    border-radius: 15px;
+    box-shadow: $box-shadow-light;
+
+    font-size: 0.825em;
+    font-weight: 500;
+    color: $tertiary-color;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 1.5rem;
+    
+    color: #00da00;
+}
+
+.content {
+    color: $secondary-color;
+}

@@ -25,7 +25,6 @@
     color: $font-primary-color;
 
     box-shadow: $box-shadow-light;
-    text-shadow: $text-shadow;
 
     & * {
         margin-bottom: 8px;
@@ -68,7 +67,7 @@
 .buttons-links {
     margin: auto;
     
-    & > a {
+    & > .link {
         display: block;
         text-align: center;
         padding: 10px 30px;

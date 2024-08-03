@@ -22,7 +22,8 @@
                 [ngClass]="{'invalidInput': contactForm.controls.name.invalid && (contactForm.controls.name.dirty && contactForm.controls.name.touched)}">
                 
                 @if (
-                    contactForm.controls.name.invalid && (contactForm.controls.name.dirty && contactForm.controls.name.touched)
+                    contactForm.controls.name.invalid && 
+                    (contactForm.controls.name.dirty && contactForm.controls.name.touched)
                 ) {
                     <span class="invalidMessage">
                         <i class="pi pi-info-circle"></i>
@@ -89,10 +90,23 @@
                 [disabled]="contactForm.invalid"
                 type="submit" 
                 class="button">
-                    enviar
+
+                @if (sendingMail) {
+                    <i class="pi pi-sync loading"></i>
+                } @else {
+                    <span>enviar</span>
+                }
+
                 </button>
             </div>
 
         </form>
     </section>
+
+    @if (displayConfirmationMail) {
+        <section 
+        class="container-confirmation-mail">
+            <app-confirmation-mail/>
+        </section>
+    }
 </main>

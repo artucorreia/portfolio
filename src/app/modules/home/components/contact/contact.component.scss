@@ -1,5 +1,6 @@
 @import '../../../../dist/scss/variables.scss';
 @import '../../../../dist/scss/classes.scss';
+@import '../../../../dist/scss/animations.scss';
 @import "primeicons/primeicons.css";
 
 * {
@@ -95,6 +96,12 @@
         background-color: $color-effect-primary;
         cursor: auto;
     }
+}
+
+.container-confirmation-mail{
+    position: fixed;
+    top: 8rem;
+    right: 1.5rem;
 }
 
 @media (max-width: 576px) {

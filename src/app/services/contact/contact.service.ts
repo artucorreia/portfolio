@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Mail } from '../../model/mail';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,11 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  public sendMail(mail: Mail) {
-    // this.http.post<Mail>(`${this._apiUrl}mails`)
+  public sendMail(mail: Mail): Observable<Mail> {
+    console.log(mail)
+    return this.http.post<Mail>(`${this._apiUrl}mails`, mail).pipe(
+      res => res,
+      error => error
+    );
   }
 }
