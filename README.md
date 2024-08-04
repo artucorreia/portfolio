@@ -1,27 +1,23 @@
-# Portfolio
+<p align="center">
+  <img src="public/assets/png/portfolio.png" alt="portfolio">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+<h1  align="center" style="font-weight: bold;">Portfólio 💻</h1>
 
-## Development server
+## 👋🏾 Sobre Mim
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Olá! Eu sou um desenvolvedor web e atualmente, estou cursando o 5º semestre de Sistemas de Informação e possuo experiência tanto no desenvolvimento front-end quanto no back-end. Focado no desenvolvimento de APIs RESTful utilizando Spring Boot e na criação de interfaces de usuário com Angular.
 
-## Code scaffolding
+## 🚀 O que você encontrará
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+No meu portfólio você vai conhecer um pouco da minha história e objetivos além de visualizar alguns dos meus projetos mais legais.
 
-## Build
+## 💻 Tecnologias Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![My Skills](https://skillicons.dev/icons?i=angular,ts,spring,java,mysql)](https://skillicons.dev)
 
-## Running unit tests
+## 📃 Licença
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Este software está disponível sob as seguintes licenças:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [MIT](https://rem.mit-license.org)
