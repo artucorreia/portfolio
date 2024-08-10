@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
-  private _apiUrl: string = "http://localhost:8080/api/v1/";
+  private _apiUrl: string = "http://92.112.179.24:8080/api/v1/";
   
   constructor(private http: HttpClient) { }
 
