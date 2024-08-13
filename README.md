@@ -11,6 +11,7 @@ Olá! Eu sou um desenvolvedor web e atualmente, estou cursando o 5º semestre de
 ## 🚀 O que você encontrará
 
 No meu portfólio você vai conhecer um pouco da minha história e objetivos além de visualizar alguns dos meus projetos mais legais.
+- Link para acesso: [portfolio-artucorreia](https://portfolio-artucorreia.web.app/) 
 
 ## 💻 Tecnologias Utilizadas
 
