@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ContactService } from '../../../../services/contact/contact.service';
-import { Mail } from '../../../../model/mail';
+import { FormBuilder, FormControl, FormGroup, MaxLengthValidator, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ConfirmationMailComponent } from '../confirmation-mail/confirmation-mail.component';
-import { finalize } from 'rxjs';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -29,10 +28,7 @@ export class ContactComponent {
   public displayConfirmationMail: boolean = false;
   public sendingMail: boolean = false;
 
-  constructor (
-    private service: ContactService,
-    private _fb: FormBuilder
-  ) {
+  constructor (private _fb: FormBuilder) {
     this.contactForm = this._fb.group({
       name:    ['', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]],
       email:   ['', [Validators.required, Validators.email, Validators.minLength(15), Validators.maxLength(100)]],
@@ -40,35 +36,41 @@ export class ContactComponent {
     });
   }
 
-  private mailFactory(): Mail {
+  ngOnInit(): void {
+    fetch(environment.SERVICE_ID)
+    fetch(environment.TEMPLATE_ID)
+    fetch(environment.PUBLIC_KEY)
+  }
+
+  private validateControls(): void {
     const {name, email, message} = this.contactForm.controls;
 
     if(!name.value || !email.value || !message.value) throw new Error("Resources must be valid");
-
-    return {
-      senderName: name.value,
-      senderMail: email.value,
-      message: message.value
-    }
   }
 
-  public submitForm(): void {
+  public submitForm(event: Event): void {
     this.changeSendingMail();
+    this.validateControls();
 
-    let mail: Mail = this.mailFactory();
-
-    this.service.sendMail(mail).pipe(
-      finalize(() => {
-        this.changeSendingMail();
-        this.contactForm.enable();
-      })
-    ).subscribe({
-      next: () => {
+    emailjs.sendForm(
+      environment.SERVICE_ID,
+      environment.TEMPLATE_ID,
+      event.target as HTMLFormElement,{
+        publicKey: environment.PUBLIC_KEY
+    }).then(
+      () => {
         this.changeDisplayConfirmationMail();
         setTimeout(() => {this.changeDisplayConfirmationMail()}, 4000);
       },
-      error: error => console.error("Attempt to send an email failed " + error)
-    });
+      (error) => {
+        console.log("Attempt to send an email failed...", (error as EmailJSResponseStatus).text);
+      },
+    ).finally(
+      () => {
+        this.changeSendingMail();
+        this.contactForm.enable();
+      }
+    );
 
     this.resetForms();
     this.contactForm.disable();
