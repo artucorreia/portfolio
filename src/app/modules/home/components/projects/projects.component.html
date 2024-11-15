@@ -1,5 +1,5 @@
 <main id="projects" class="container-main">
-    <h1 class="title-main" (click)="seeProjects()">projetos</h1>
+    <h1 class="title-main">projetos</h1>
     <div class="divider"></div>
     
     <span class="describe">Aqui você vai encontrar alguns dos meus projetos</span>
@@ -17,16 +17,18 @@
         
         <section class="container-technologies">
         @for (technology of project.technologies; track $index) {
-            <div class="technology">{{technology.name}}</div>
+            <div class="technology">{{technology}}</div>
         }   
         </section>
 
         <article class="buttons-links">
-            @if (project.active) {
-                <a href="https://artucorreia.github.io/app-todo-list/" target="_blank" rel="next" class="button link">experimente</a><br>
+            @if (project.active && !project.professional) {
+                <a [href]="project.deployUrl" target="_blank" rel="next" class="button link">experimente</a><br>
             }
             
-            <a [href]="project.repositoryUrl" target="_blank" rel="next" class="button link">repositório</a>
+            @if (!project.professional) {
+                <a [href]="project.repositoryUrl" target="_blank" rel="next" class="button link">repositório</a>
+            }
         </article>
     </section>
 }

@@ -1,12 +1,12 @@
-import { Technology } from "./technology";
+import { Technology } from "../enums/technology";
 
 export interface Project {
-    id: number;
     name: string;
     description: string;
     imageUrl: string;
-    deployUrl: string;
-    repositoryUrl: string;
+    deployUrl: string | null;
+    repositoryUrl: string | null;
     active: boolean;
+    professional: boolean;
     technologies: Technology[];
 }
