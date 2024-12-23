@@ -49,13 +49,17 @@ export class AboutComponent {
         imageUrl: 'assets/png/postgresql.png'
       },
       {
-        name: 'Git',
-        imageUrl: 'assets/png/git.png'
+        name: 'Nginx',
+        imageUrl: 'assets/png/nginx.png'
       },
       {
         name: 'Docker',
         imageUrl: 'assets/png/docker.png'
-      }
+      },
+      {
+        name: 'Git',
+        imageUrl: 'assets/png/git.png'
+      },
     ]
   }
 }
