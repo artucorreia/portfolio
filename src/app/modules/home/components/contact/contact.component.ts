@@ -37,9 +37,9 @@ export class ContactComponent {
   }
 
   ngOnInit(): void {
-    fetch(environment.SERVICE_ID)
-    fetch(environment.TEMPLATE_ID)
-    fetch(environment.PUBLIC_KEY)
+    fetch(environment.serviceId)
+    fetch(environment.templateId)
+    fetch(environment.publicKey)
   }
 
   private validateControls(): void {
@@ -53,10 +53,10 @@ export class ContactComponent {
     this.validateControls();
 
     emailjs.sendForm(
-      environment.SERVICE_ID,
-      environment.TEMPLATE_ID,
+      environment.serviceId,
+      environment.templateId,
       event.target as HTMLFormElement,{
-        publicKey: environment.PUBLIC_KEY
+        publicKey: environment.publicKey
     }).then(
       () => {
         this.changeDisplayConfirmationMail();
