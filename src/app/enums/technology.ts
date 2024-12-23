@@ -9,5 +9,10 @@ export enum Technology {
     MYSQL="MySQL",
     POTGRESQL="PostgreSQL",
     JUNIT="JUnit",
-    MIGRATION="Migration"
+    MIGRATION="Migration",
+    PAYMENT_API="Payment API",
+    NGINX="Nginx",
+    CERTBOT="Certbot",
+    PWA="PWA",
+    AWS="AWS"
 }

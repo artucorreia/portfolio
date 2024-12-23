@@ -6,30 +6,28 @@
     
 @for (project of projects; track $index) {
     <section class="container">
-        <img 
-        [src]="project.imageUrl" 
-        alt="image {{project.name}}" 
-        class="img-project">
+        <img [src]="project.imageUrl" alt="image {{project.name}}" class="img-project">
 
-        <h3 class="title">{{project.name}}</h3>
-        
-        <p class="content">{{project.description}}</p>
-        
-        <section class="container-technologies">
-        @for (technology of project.technologies; track $index) {
-            <div class="technology">{{technology}}</div>
-        }   
-        </section>
-
-        <article class="buttons-links">
-            @if (project.active && !project.professional) {
-                <a [href]="project.deployUrl" target="_blank" rel="next" class="button link">experimente</a><br>
-            }
+        <div class="content">
+            <h3 class="title">{{project.name}}</h3>
             
-            @if (!project.professional) {
-                <a [href]="project.repositoryUrl" target="_blank" rel="next" class="button link">repositório</a>
+            <p class="description">{{project.description}}</p>
+            
+            <section class="technologies">
+            @for (technology of project.technologies; track $index) {
+                <div class="technology">{{technology}}</div>
             }
-        </article>
+            </section>
+            <article class="buttons-links">
+                @if (project.active && !project.professional) {
+                    <a [href]="project.deployUrl" target="_blank" rel="next" class="button link">experimente</a><br>
+                }
+            
+                @if (!project.professional) {
+                    <a [href]="project.repositoryUrl" target="_blank" rel="next" class="button link">repositório</a>
+                }
+            </article>
+        </div>
     </section>
 }
 </main>
